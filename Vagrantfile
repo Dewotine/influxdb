@@ -15,24 +15,47 @@ Vagrant.configure("2") do |config|
 	
 	config.ssh.insert_key = false
 	
-	config.vm.define "influxdb" do  |rundeck|
-  	rundeck.vm.box = "debian/jessie64"
-	rundeck.vm.network "public_network", ip: "192.168.1.200", bridge: "eth0"
-	rundeck.vm.hostname = "rundeck"
-  	rundeck.vm.network "forwarded_port", guest: 80, host: 8080
-  	rundeck.vm.network "forwarded_port", guest: 443, host: 8443
-  	rundeck.vm.network "forwarded_port", guest: 4440, host: 4440
-  	rundeck.vm.network "forwarded_port", guest: 4443, host: 4443
+	config.vm.define "icingamaster" do |icingamaster|
+  	icingamaster.vm.box = "debian/jessie64"
+	icingamaster.vm.network "public_network", ip: "192.168.1.200", bridge: "eth0"
+	icingamaster.vm.hostname = "icingamaster"
+  	icingamaster.vm.network "forwarded_port", guest: 80, host: 8080
+  	icingamaster.vm.network "forwarded_port", guest: 443, host: 8443
+  	icingamaster.vm.network "forwarded_port", guest: 5432, host: 5432
 	end
 
-        config.vm.define "debian_test" do  |rundeck|
-        rundeck.vm.box = "debian/jessie64"
-        rundeck.vm.network "public_network", ip: "192.168.1.201", bridge: "eth0"
-        rundeck.vm.hostname = "mariadb"
-        rundeck.vm.network "forwarded_port", guest: 80, host: 8081
-        rundeck.vm.network "forwarded_port", guest: 443, host: 8444
-        rundeck.vm.network "forwarded_port", guest: 3306, host: 3306
+        config.vm.define "icingasat1" do  |icingasat1|
+        icingasat1.vm.box = "debian/jessie64"
+        icingasat1.vm.network "public_network", ip: "192.168.1.201", bridge: "eth0"
+        icingasat1.vm.hostname = "icingasat1"
+        icingasat1.vm.network "forwarded_port", guest: 80, host: 8081
+        icingasat1.vm.network "forwarded_port", guest: 443, host: 8444
+        icingasat1.vm.network "forwarded_port", guest: 5432, host: 5433
+	icingasat1.vm.network "private_network", ip: "192.168.2.201"
         end
+
+	config.vm.define "icingasat2" do  |icingasat2|
+        icingasat2.vm.box = "debian/jessie64"
+        icingasat2.vm.network "public_network", ip: "192.168.1.202", bridge: "eth0"
+        icingasat2.vm.hostname = "icingasat2"
+        icingasat2.vm.network "forwarded_port", guest: 80, host: 8082
+        icingasat2.vm.network "forwarded_port", guest: 443, host: 8445
+        icingasat2.vm.network "forwarded_port", guest: 5432, host: 5434
+	icingasat2.vm.network "private_network", ip: "192.168.3.202"
+        end
+
+	config.vm.define "icingacli1" do  |icingacli1|
+        icingacli1.vm.box = "debian/jessie64"
+        icingacli1.vm.hostname = "icingacli1"
+	icingacli1.vm.network "private_network", ip: "192.168.2.1"
+        end
+
+	config.vm.define "icingacli2" do  |icingacli2|
+        icingacli2.vm.box = "debian/jessie64"
+        icingacli2.vm.hostname = "icingacli2"
+	icingacli2.vm.network "private_network", ip: "192.168.3.1"
+        end
+
 
 #	config.vm.define "dc12phc061" do  |centos_test|
 #  	centos_test.vm.box = "centos/7"
