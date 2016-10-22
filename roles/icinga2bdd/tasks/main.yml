@@ -1,0 +1,42 @@
+---
+# tasks file for icinga2bdd
+
+#- name: Installation des paquets pour postgresql
+#  apt:
+#    pkg={{ item }}
+#    update_cache=yes
+#    cache_valid_time=3600
+#  with_items:
+#    - postgresql
+#
+#- name: Activation de postgresql au demarrage du serveur
+#  service:
+#    name=postgresql
+#    enabled=yes
+#
+#- name: Demarrage du service Postgres
+#  service:
+#    name=postgresql
+#    state=started
+
+- name: Add pgdg apt key
+  apt_key:
+    id=ACCC4CF8
+    url=http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc
+
+- name: Add pgdg apt repository
+  apt_repository:
+    repo="deb http://apt.postgresql.org/pub/repos/apt/ {{ansible_distribution_release}}-pgdg main"
+    filename='postgresql'
+
+- name: Install postgresql
+  apt:
+    pkg={{item}}
+    state=present
+    update_cache=yes
+    cache_valid_time=3600
+  with_items:
+    - libpq-dev
+    - postgresql-client
+    - postgresql-contrib
+    - postgresql

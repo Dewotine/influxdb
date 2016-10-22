@@ -44,17 +44,17 @@ Vagrant.configure("2") do |config|
 	icingasat2.vm.network "private_network", ip: "192.168.3.202"
         end
 
-	config.vm.define "icingacli1" do  |icingacli1|
-        icingacli1.vm.box = "debian/jessie64"
-        icingacli1.vm.hostname = "icingacli1"
-	icingacli1.vm.network "private_network", ip: "192.168.2.1"
-        end
+#config.vm.define "icingacli1" do  |icingacli1|
+#       icingacli1.vm.box = "debian/jessie64"
+#       icingacli1.vm.hostname = "icingacli1"
+#icingacli1.vm.network "private_network", ip: "192.168.2.1"
+#       end
 
-	config.vm.define "icingacli2" do  |icingacli2|
-        icingacli2.vm.box = "debian/jessie64"
-        icingacli2.vm.hostname = "icingacli2"
-	icingacli2.vm.network "private_network", ip: "192.168.3.1"
-        end
+#config.vm.define "icingacli2" do  |icingacli2|
+#       icingacli2.vm.box = "debian/jessie64"
+#       icingacli2.vm.hostname = "icingacli2"
+#icingacli2.vm.network "private_network", ip: "192.168.3.1"
+#       end
 
 
 #	config.vm.define "dc12phc061" do  |centos_test|

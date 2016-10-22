@@ -3,10 +3,14 @@
   hosts: icingamaster
   become: True
   vars:
-    # Variables pour icinga2
-    tomcat_major_version: 8
+    icinga2_ido_conf: /etc/icinga2/features-available/ido-pgsql.conf
+    icinga2_bdd_util: icinga2
+    icinga2_nom_bdd: icinga2
+    icinga2_mdp_bdd: iHNeVuPpj5x2
+    icinga2_serveur_bdd: localhost
 
   roles:
-    - icingaweb2
-    - geerlingguy.postgresql
+    - icinga2bdd
+    - icinga2
+
   
