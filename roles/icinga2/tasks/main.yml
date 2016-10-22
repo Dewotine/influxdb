@@ -1,2 +1,5 @@
 ---
 # tasks file for icinga2
+
+# Add an Apt signing key, will not download if present
+- apt_key: id=473041FA url=https://ftp-master.debian.org/keys/archive-key-6.0.asc state=present

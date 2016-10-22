@@ -1,0 +1,10 @@
+[icingamaster]
+icingamaster ansible_ssh_host=127.0.0.1 ansible_ssh_port=2222
+
+[incingasat]
+icingasat1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2200
+icingasat2 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2201
+
+[icingacli]
+icingacli1 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2202
+icingacli2 ansible_ssh_host=127.0.0.1 ansible_ssh_port=2203
