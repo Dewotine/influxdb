@@ -1,5 +1,37 @@
 ---
 # tasks file for icinga2
 
-# Add an Apt signing key, will not download if present
-- apt_key: id=473041FA url=https://ftp-master.debian.org/keys/archive-key-6.0.asc state=present
+- name: Ajout de la clef du depot debmon pour icinga2
+  apt_key:
+    url=http://debmon.org/debmon/repo.key
+    state=present
+
+- name: Ajout du depot debmon pour icinga2
+  apt_repository:
+    repo='deb http://debmon.org/debmon debmon-{{ansible_distribution_release}} main'
+    state=present
+    filename='icinga2'
+
+- name: Ajout du depot debian backport (contient des dependances requises pour icinga2)
+  apt_repository:
+    repo='deb http://httpredir.debian.org/debian {{ansible_distribution_release}}-backports main'
+    state=present
+    filename='icinga2'
+
+- name: Installation des paquets icinga2
+  apt:
+    pkg={{ item }}
+    update_cache=yes
+    cache_valid_time=3600
+  with_items:
+    - icinga2
+    - icinga2-ido-pgsql
+
+- name: Copie du fichier de configuration de icinga2-ido-pgsql
+  template:
+    src=templates/ido-pgsql.j2
+    dest={{ icinga2_ido_conf }}
+    backup=no
+
+- name: Activation des feature ido-pgsql et command
+  
