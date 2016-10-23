@@ -1,6 +1,31 @@
 ---
 # tasks file for icingaweb2
+- name: Installation des paquets pour icingaweb2
+  apt:
+    pkg={{item}}
+    state=present
+    update_cache=yes
+    cache_valid_time=3600
+  with_items:
+    - apache2
+    - php5
+    - php5-cli
+    - php-pear
+    - php5-xmlrpc
+    - php5-xsl
+    - php-soap
+    - php5-gd
+    - php5-ldap
+    - php5-pgsql
+    # Dependances Imagick et INTL
+    - php5-intl
+    - php5-imagick
+    # icingaweb2
+    - icingaweb2
+
+- name: Copie du fichier de configuration de PHP php.ini (Ajout de la timezone Europe/Paris)
+  copy: src=files/php.ini dest={{ php.ini_dest }}
 
 - name: Icinga Web2 Installation finished (Debian)
   debug: msg="Now generate a token with 'icingacli setup token create' and go at http://IP//icingaweb2/setup to continue the installation"
-  tags: icinga2-ansible-web2-ui-install
+

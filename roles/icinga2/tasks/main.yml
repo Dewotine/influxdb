@@ -1,6 +1,5 @@
 ---
 # tasks file for icinga2
-
 - name: Ajout de la clef du depot debmon pour icinga2
   apt_key:
     url=http://debmon.org/debmon/repo.key
@@ -34,4 +33,7 @@
     backup=no
 
 - name: Activation des feature ido-pgsql et command
-  
+  shell: icinga2 feature enable command ido-pgsql
+  notify: restart icinga2
+
+
