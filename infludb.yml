@@ -10,7 +10,7 @@
     icinga2_mdp_bdd: iHNeVuPpj5x2
     icinga2_serveur_bdd: localhost
     # Variables pour la configuration de l'interface icinga2web
-    php.ini_dest: /etc/php5/apache2/php.ini
+    php_ini_dest: /etc/php5/apache2/php.ini
 
   roles:
     - icinga2bdd

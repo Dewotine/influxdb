@@ -19,17 +19,17 @@
 #    name=postgresql
 #    state=started
 
-- name: Add pgdg apt key
+- name: Ajout de la clef pour le depot pgdg
   apt_key:
     id=ACCC4CF8
     url=http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc
 
-- name: Add pgdg apt repository
+- name: Ajout du depot pgdg
   apt_repository:
     repo="deb http://apt.postgresql.org/pub/repos/apt/ {{ansible_distribution_release}}-pgdg main"
     filename='postgresql'
 
-- name: Install postgresql
+- name: Installation de postgresql
   apt:
     pkg={{item}}
     state=present
@@ -40,3 +40,7 @@
     - postgresql-client
     - postgresql-contrib
     - postgresql
+
+#- name: Creation de l'utilisateur postgresql pour icingaweb2
+#  postgresql_user:
+
