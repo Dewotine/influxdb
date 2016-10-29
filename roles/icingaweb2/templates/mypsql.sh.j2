@@ -1,0 +1,16 @@
+#!/bin/bash
+
+NOM_ADMIN={{ icingaweb2_nom_admin }}
+MDP_ADMIN={{ icingaweb2_mdp_admin }}
+BDD_UTIL={{ icingaweb2_bdd_util }}
+BDD_UTIL_MDP={{ icingaweb2_mdp_bdd }}
+BDD_SERVEUR={{ icinga2_serveur_bdd }}
+NOM_BDD={{ icingaweb2_nom_bdd }}
+
+MDP_CRYPTE=`openssl passwd -1 $MDP_ADMIN`
+export PGPASSWORD=$BDD_UTIL_MDP
+
+/usr/bin/psql -U $BDD_UTIL -d $NOM_BDD -h $BDD_SERVEUR \
+              -c "INSERT INTO icingaweb_user (name, active, password_hash) VALUES ('$NOM_ADMIN', 1, '$MDP_CRYPTE') ON CONFLICT(name) DO UPDATE set password_hash='$MDP_CRYPTE' ;"
+
+exit $?

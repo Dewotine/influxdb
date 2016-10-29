@@ -1,0 +1,15 @@
+---
+# tasks file for inciga2_master
+
+- name: Activation de la feature api
+  shell: icinga2 feature enable api
+
+- name: Redémarrage du Service icinga2
+  service:
+    name=icinga2
+    state=restarted
+
+- name: Génération d'une nouvelle autorité de certification
+  shell: icinga2 pki new-ca
+  args:
+    creates: /var/lib/icinga2/ca/ca.key

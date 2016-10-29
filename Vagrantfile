@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
 	
 	config.vm.define "icingamaster" do |icingamaster|
   	icingamaster.vm.box = "debian/jessie64"
-	icingamaster.vm.network "public_network", ip: "192.168.1.200", bridge: "eth0"
+	icingamaster.vm.network "private_network", ip: "192.168.4.200"
 	icingamaster.vm.hostname = "icingamaster"
   	icingamaster.vm.network "forwarded_port", guest: 80, host: 8080
   	icingamaster.vm.network "forwarded_port", guest: 443, host: 8443
@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
 
         config.vm.define "icingasat1" do  |icingasat1|
         icingasat1.vm.box = "debian/jessie64"
-        icingasat1.vm.network "public_network", ip: "192.168.1.201", bridge: "eth0"
+        icingasat1.vm.network "private_network", ip: "192.168.4.201"
         icingasat1.vm.hostname = "icingasat1"
         icingasat1.vm.network "forwarded_port", guest: 80, host: 8081
         icingasat1.vm.network "forwarded_port", guest: 443, host: 8444
@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
 
 	config.vm.define "icingasat2" do  |icingasat2|
         icingasat2.vm.box = "debian/jessie64"
-        icingasat2.vm.network "public_network", ip: "192.168.1.202", bridge: "eth0"
+        icingasat2.vm.network "private_network", ip: "192.168.4.202"
         icingasat2.vm.hostname = "icingasat2"
         icingasat2.vm.network "forwarded_port", guest: 80, host: 8082
         icingasat2.vm.network "forwarded_port", guest: 443, host: 8445
@@ -44,17 +44,17 @@ Vagrant.configure("2") do |config|
 	icingasat2.vm.network "private_network", ip: "192.168.3.202"
         end
 
-#config.vm.define "icingacli1" do  |icingacli1|
-#       icingacli1.vm.box = "debian/jessie64"
-#       icingacli1.vm.hostname = "icingacli1"
-#icingacli1.vm.network "private_network", ip: "192.168.2.1"
-#       end
+	config.vm.define "icingacli1" do  |icingacli1|
+	icingacli1.vm.box = "debian/jessie64"
+	icingacli1.vm.hostname = "icingacli1"
+	icingacli1.vm.network "private_network", ip: "192.168.2.1"
+ 	end
 
-#config.vm.define "icingacli2" do  |icingacli2|
-#       icingacli2.vm.box = "debian/jessie64"
-#       icingacli2.vm.hostname = "icingacli2"
-#icingacli2.vm.network "private_network", ip: "192.168.3.1"
-#       end
+	config.vm.define "icingacli2" do  |icingacli2|
+        icingacli2.vm.box = "debian/jessie64"
+        icingacli2.vm.hostname = "icingacli2"
+	icingacli2.vm.network "private_network", ip: "192.168.3.1"
+        end
 
 
 #	config.vm.define "dc12phc061" do  |centos_test|

@@ -1,0 +1,20 @@
+###########################
+# Ne pas modifier
+# Fichier gere par Ansible
+# Deploye le {{ ansible_date_time.date }}
+###########################
+
+# Database administrative login by Unix domain socket
+local   all             postgres                                peer
+
+# TYPE  DATABASE        USER            ADDRESS                 METHOD
+
+# "local" is for Unix domain socket connections only
+local   all             all                                     peer
+local   icinga2         icinga2                                 md5
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            md5
+host   icinga2         icinga2         127.0.0.1/32            md5
+# IPv6 local connections:
+host    all             all             ::1/128                 md5
+host    icinga2         icinga2         ::1/128                 md5

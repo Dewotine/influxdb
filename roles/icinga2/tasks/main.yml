@@ -36,6 +36,7 @@
   shell: icinga2 feature enable command ido-pgsql
   notify: restart icinga2
 
-
-
-
+- name: Importation de la base de données pour idopgsql
+  shell: psql -U postgres -d {{ icinga2_nom_bdd }}  < /usr/share/icinga2-ido-pgsql/schema/pgsql.sql
+  become: true
+  become_user: postgres

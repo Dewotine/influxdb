@@ -40,7 +40,49 @@
     - postgresql-client
     - postgresql-contrib
     - postgresql
+    - python-psycopg2 # requis par Ansible pour les modules postgresql
 
-#- name: Creation de l'utilisateur postgresql pour icingaweb2
-#  postgresql_user:
+- name: Déploiement du fichier de configuration des utilisateurs
+  template:
+    src=templates/pg_hba.conf.j2
+    dest={{ pg_hba_conf_file }}
+    backup=no
+  notify: restart postgresql
+
+- name: Création de l utilisateur postgresql pour icinga2
+  postgresql_user:
+    name={{ icinga2_bdd_util }}
+    password={{ icinga2_mdp_bdd }}
+    encrypted=yes
+    role_attr_flags=CREATEDB,NOSUPERUSER
+    state=present
+  become: true
+  become_user: postgres
+
+- name: Création de l utilisateur postgresql pour icingaweb2
+  postgresql_user:
+    name={{ icingaweb2_bdd_util }}
+    password={{ icingaweb2_mdp_bdd }}
+    encrypted=yes
+    role_attr_flags=CREATEDB,NOSUPERUSER
+    state=present
+  become: true
+  become_user: postgres
+
+- name: Creation de la base icinga2
+  postgresql_db:
+    name={{ icinga2_nom_bdd }}
+    encoding='UTF-8'
+    owner={{ icinga2_bdd_util }}
+  become: true
+  become_user: postgres
+
+- name: Creation de la base pour icingaweb2
+  postgresql_db:
+    name={{ icingaweb2_nom_bdd }}
+    encoding='UTF-8'
+    owner={{ icingaweb2_bdd_util }}
+  become: true
+  become_user: postgres
+
 

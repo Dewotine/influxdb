@@ -1,0 +1,73 @@
+---
+    # Variables pour l'installation d'icinga2
+    icinga_fichier_pref: /etc/apt/preferences.d/icinga2.pref
+
+    # Variables pour la configuration du connecteur ido
+    icinga2_ido_nom_resource: icinga_ido
+    icinga2_ido_conf: /etc/icinga2/features-available/ido-pgsql.conf
+    icinga2_bdd_util: icinga2
+    icinga2_nom_bdd: icinga2
+    icinga2_serveur_bdd: localhost
+    icinga2_serveur_bdd_port: 5432
+    icinga2_dossier_conf: /etc/icinga2
+
+
+    # Variables pour la configuration de l'interface web
+    icingaweb2_nom_resource: icingaweb_db
+    icingaweb2_bdd_util: icingaweb2
+    icingaweb2_nom_bdd: icingaweb2
+    icingaweb2_serveur_bdd: localhost
+    icingaweb2_serveur_bdd_port: 5432
+    icingaweb2_dossier_conf: /etc/icingaweb2
+    icingaweb2_nom_admin: admin
+
+
+    # Variables pour la configuration de l'interface icinga2web
+    php_ini_dest: /etc/php5/apache2/php.ini
+
+    # Variables pour la configuration du serveur de bdd
+    postgresql_version: 9.5
+    postgresql_apt_pin_priority: 990
+    postgresql_default_auth_method: md5 # md5
+
+    # Création des utilisateurs de la base de données
+    postgresql_pg_hba_default:
+      - { type: local, database: all, user: '{{ postgresql_admin_user }}', address: '', method: 'peer', comment: '' }
+      - { type: local, database: all, user: '{{ icinga2_bdd_util }}', address: '',             method: '{{ postgresql_default_auth_method }}', comment: '"local" is for Unix domain socket connections only' }
+      - { type: host,  database: all, user: '{{ icinga2_bdd_util }}', address: '127.0.0.1/32', method: '{{ postgresql_default_auth_method }}', comment: 'IPv4 local connections:' }
+      - { type: host,  database: all, user: '{{ icinga2_bdd_util }}', address: '::1/128', method: '{{ postgresql_default_auth_method }}', comment: 'IPv6 local connections:' }
+      - { type: local, database: all, user: '{{ icingaweb2_bdd_util }}', address: '',             method: '{{ postgresql_default_auth_method }}', comment: '"local" is for Unix domain socket connections only' }
+      - { type: host,  database: all, user: '{{ icingaweb2_bdd_util }}', address: '127.0.0.1/32', method: '{{ postgresql_default_auth_method }}', comment: 'IPv4 local connections:' }
+      - { type: host,  database: all, user: '{{ icingaweb2_bdd_util }}', address: '::1/128', method: '{{ postgresql_default_auth_method }}', comment: 'IPv6 local connections:' }
+
+    postgresql_users:
+      - name: "{{ icinga2_bdd_util }}"
+        pass: "{{ icinga2_mdp_bdd }}"
+        encrypted: yes
+      - name: "{{ icingaweb2_bdd_util }}"
+        pass: "{{ icingaweb2_mdp_bdd }}"
+        encrypted: yes
+
+    # Création des utilisateurs des bases de données (1 pour l'affichage web , 1 pour l'état des serveurs)
+    # et affectation des droits
+    postgresql_databases:
+      - name: "{{ icinga2_nom_bdd }}"
+        owner: "{{ icinga2_bdd_util }}"
+      - name: "{{ icingaweb2_nom_bdd }}"
+        owner: "{{ icingaweb2_bdd_util }}"
+
+    postgresql_user_privileges:
+      - name: "{{ icinga2_bdd_util }}"
+        db: "{{ icinga2_nom_bdd }}"
+        priv: "ALL"
+        role_attr_flags: "CREATEDB"
+      - name: "{{ icingaweb2_bdd_util }}"
+        db: "{{ icingaweb2_nom_bdd }}"
+        priv: "ALL"
+        role_attr_flags: "CREATEDB"
+
+    # Optimisation mémoire
+    postgresql_shared_buffers: "256MB"
+    postgresql_temp_buffers: "8MB"
+    postgresql_work_mem: "4MB"
+    postgresql_maintenance_work_mem: "64MB"

@@ -1,0 +1,6 @@
+---
+# tasks file for inciga2_satellites
+
+- name: Activation de la feature api
+  shell: icinga2 feature enable api
+  notify: restart icinga2

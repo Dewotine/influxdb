@@ -1,0 +1,18 @@
+[icingaweb_db]
+type = "db"
+db = "pgsql"
+host = "{{ icingaweb2_serveur_bdd }}"
+port = "{{ icingaweb2_serveur_bdd_port }}"
+dbname = "{{ icingaweb2_nom_bdd }}"
+username = "{{ icingaweb2_bdd_util }}"
+password = "{{ icingaweb2_mdp_bdd }}"
+prefix = "icingaweb_"
+
+[icinga_ido]
+type = "db"
+db = "pgsql"
+host = "{{ icinga2_serveur_bdd }}"
+port = "{{ icinga2_serveur_bdd_port }}"
+dbname = "{{ icinga2_nom_bdd }}"
+username = "{{ icinga2_bdd_util }}"
+password = "{{ icinga2_mdp_bdd }}"

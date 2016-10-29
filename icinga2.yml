@@ -1,0 +1,13 @@
+---
+- name: Configuration des serveurs avec icinga2 et icingaweb2
+  hosts:
+    icingamaster
+    #icingasat1
+  become: True
+  vars_files:
+    - icinga2_vault.yml
+  roles:
+    - postgresql
+    - icinga2
+    - icingaweb2
+    - icinga2_master

@@ -23,20 +23,115 @@
     # icingaweb2
     - icingaweb2
 
-- name: Copie du fichier de configuration de PHP php.ini (Ajout de la timezone Europe/Paris)
+- name: Copie des fichiers de configuration "*.ini" dans " {{ icingaweb2_dossier_conf }}"
+  template:
+    src=templates/{{item}}.ini.j2
+    dest={{ icingaweb2_dossier_conf }}/{{item}}.ini
+    mode=0660
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    backup=no
+  with_items:
+    - authentication
+    - config
+    - groups
+    - resources
+    - roles
+
+- name: Création des dossiers pour la configuration d'icingaweb2
+  file:
+    path={{ icingaweb2_dossier_conf }}/{{item}}
+    mode=2770
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    state=directory
+  with_items:
+    - dashboards
+    - enabledModules
+    - navigation
+    - modules
+
+- name: Création du sous-dossier monitoring pour la configuration d'icingaweb2
+  file:
+    path={{ icingaweb2_dossier_conf }}/modules/monitoring
+    mode=2770
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    recurse=yes
+    state=directory
+
+- name: Copie des fichiers de configuration "*.ini" dans " {{ icingaweb2_dossier_conf }}/modules/monitoring"
+  template:
+    src=templates/{{item}}.ini.j2
+    dest={{ icingaweb2_dossier_conf }}/modules/monitoring/{{item}}.ini
+    mode=0660
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    backup=no
+  with_items:
+    - backends
+    - commandtransports
+
+- name: Copie du fichier de configuration config.ini du dossier modules/monitoring
+  template:
+    src=config_monitoring.ini.j2
+    dest={{ icingaweb2_dossier_conf }}/navigation/config.ini
+    mode=0660
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    backup=no
+
+- name: Copie du fichier de configuration menu.ini
+  template:
+    src=templates/menu.ini.j2
+    dest={{ icingaweb2_dossier_conf }}/navigation/menu.ini
+    mode=0660
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    backup=no
+
+- name: Copie du fichier de configuration d'apache
+  template:
+    src=templates/apache.conf.j2
+    dest={{ icingaweb2_dossier_conf }}/apache.conf
+    mode=0660
+    owner=root
+    group={{ icingaweb2_bdd_util }}
+    backup=no
+
+- name: Création des liens pour les modules "doc", setup et "monitoring"
+  file:
+    src=/usr/share/icingaweb2/modules/{{item}}
+    dest={{ icingaweb2_dossier_conf }}/enabledModules/{{item}}
+    owner=www-data
+    group={{ icingaweb2_bdd_util }}
+    state=link
+  with_items:
+    - doc
+    - monitoring
+    - setup
+
+- name: Copie du fichier de configuration de PHP "php.ini" (Ajout de la timezone Europe/Paris)
   template:
     src=templates/php.ini.j2
     dest={{ php_ini_dest }}
     backup=no
   notify: restart apache2
 
-- name: Génération du token
-  shell: icingacli setup token create
-  register: icinga2_token
+- name: Importation de la base de données pour idopgsql
+  shell: /usr/bin/psql -U {{ icingaweb2_bdd_util }} -d {{ icingaweb2_nom_bdd }} -h {{ icinga2_serveur_bdd }} < /usr/share/icingaweb2/etc/schema/pgsql.schema.sql
+  environment:
+    PGPASSWORD: "{{ icingaweb2_mdp_bdd }}"
 
-- name: Affichage du token
-  debug: var=icinga2_token.stdout_lines
+- name: Copie du script "mypsql.sh"
+  template:
+    src=templates/mypsql.sh.j2
+    dest=/root/mypsql.sh
+    mode=0755
+    backup=no
 
-- name: Icinga Web2 Installation finished (Debian)
-  debug: msg="Utiliser le token généré ci-dessus puis aller l'adresse suivante pour finir l'installation http://{{ ansible_default_ipv4.address }}/icingaweb2/setup"
+- name: Exécution du script "mypsql.sh" (Création de l'utilisateur {{ icingaweb2_nom_admin }} pour l'interface web)
+  shell: /root/mypsql.sh
 
+- name: Installation de Icinga2 complète
+  debug: "La console Icinga2 est diponible via l URL http://{{ ansible_default_ipv4.address }}/icingaweb2"
