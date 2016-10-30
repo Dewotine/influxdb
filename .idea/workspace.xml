@@ -2,107 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e609a115-9504-435b-b3bd-70509f885c06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/group_vars/icingamaster.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/group_vars/incingasat.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icinga2.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icinga2_vault.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/defaults/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/handlers/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/meta/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/tests/inventory" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/tests/test.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/vars/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/defaults/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/handlers/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/meta/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/tasks/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/tests/inventory" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/tests/test.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/vars/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2bdd/templates/pg_hba.conf.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/apache.conf.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/authentication.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/backends.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/commandtransports.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/config.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/config_monitoring.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/groups.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/menu.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/mypsql.sh.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/resources.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icingaweb2/templates/roles.ini.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/defaults/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/handlers/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/meta/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/configure.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/databases.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/extensions.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/extensions/contrib.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/extensions/dev_headers.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/extensions/postgis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/install.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/install_yum.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/main.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/monit.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/users.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tasks/users_privileges.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/HOWTO.postgresql.conf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/etc_apt_preferences.d_apt_postgresql_org_pub_repos_apt.pref.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/etc_monit_conf.d_postgresql.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/etc_systemd_system_postgresql.service.d_custom.conf.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/pg_hba.conf.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.1.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.1.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.2.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.2.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.3.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.3.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.4.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.4.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.5.j2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/templates/postgresql.conf-9.5.orig" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tests/Dockerfile-centos6" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tests/Dockerfile-ubuntu14.04" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tests/idempotence_check.sh" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tests/playbook.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/tests/vars.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/vars/Debian.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/vars/RedHat.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/postgresql/vars/empty.yml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/infludb.yml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/templates/api.conf.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_master/templates/constants.conf.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/templates/api.conf.j2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/roles/icinga2_satellites/templates/constants.conf.j2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/action_provision" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/action_set_name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/id" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/index_uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/synced_folders" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli1/virtualbox/synced_folders" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/action_provision" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/action_set_name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/id" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/index_uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/synced_folders" afterPath="$PROJECT_DIR$/.vagrant/machines/icingacli2/virtualbox/synced_folders" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/action_provision" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/action_set_name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/id" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/index_uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/synced_folders" afterPath="$PROJECT_DIR$/.vagrant/machines/icingamaster/virtualbox/synced_folders" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/action_provision" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/action_set_name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/id" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/index_uuid" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/synced_folders" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat1/virtualbox/synced_folders" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/action_provision" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/action_provision" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/action_set_name" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/action_set_name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/id" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/id" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/index_uuid" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/index_uuid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Vagrantfile" afterPath="$PROJECT_DIR$/Vagrantfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icinga2/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/icinga2/tasks/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icinga2bdd/handlers/main.yml" afterPath="$PROJECT_DIR$/roles/icinga2bdd/handlers/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icinga2bdd/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/icinga2bdd/tasks/main.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/synced_folders" afterPath="$PROJECT_DIR$/.vagrant/machines/icingasat2/virtualbox/synced_folders" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/group_vars/icingamaster.yml" afterPath="$PROJECT_DIR$/group_vars/icingamaster.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/icinga2.yml" afterPath="$PROJECT_DIR$/icinga2.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml" afterPath="$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/roles/icinga2_master/vars/main.yml" afterPath="$PROJECT_DIR$/roles/icinga2_master/vars/main.yml" />
     </list>
     <ignored path="InfluxDB.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -122,21 +55,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="icinga2.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/icinga2.yml">
+      <file leaf-file-name="constants.conf.j2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icinga2_master/templates/constants.conf.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml">
+      <file leaf-file-name="api.conf.j2" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/templates/api.conf.j2">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="838">
-              <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+            <state relative-caret-position="60">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -145,8 +78,68 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="icingamaster.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group_vars/icingamaster.yml">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icinga2_master/vars/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icingaweb2/vars/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/vars/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="incingasat.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/group_vars/incingasat.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-279">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -155,8 +148,8 @@
       <file leaf-file-name="main.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/roles/icinga2/tasks/main.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="291">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="32" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -180,23 +173,30 @@
         <option value="$PROJECT_DIR$/roles/inciga2_satellites/handlers/main.yml" />
         <option value="$PROJECT_DIR$/roles/inciga2_satellites/tasks/main.yml" />
         <option value="$PROJECT_DIR$/icinga2_vars.yml" />
-        <option value="$PROJECT_DIR$/group_vars/icingamaster.yml" />
         <option value="$PROJECT_DIR$/roles/icingaweb2/templates/resources.ini.j2" />
         <option value="$PROJECT_DIR$/roles/icinga2/tasks/main.yml" />
         <option value="$PROJECT_DIR$/roles/icingaweb2/templates/mypsql.sh.j2" />
         <option value="$PROJECT_DIR$/roles/icingaweb2/templates/groups.ini.j2" />
         <option value="$PROJECT_DIR$/roles/icingaweb2/templates/roles.ini.j2" />
         <option value="$PROJECT_DIR$/roles/inciga2_master/tasks/main.yml" />
-        <option value="$PROJECT_DIR$/icinga2.yml" />
         <option value="$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml" />
+        <option value="$PROJECT_DIR$/icinga2.yml" />
+        <option value="$PROJECT_DIR$/roles/icinga2_master/templates/constants.conf.j2" />
+        <option value="$PROJECT_DIR$/roles/icinga2_satellites/templates/constants.conf.j2" />
+        <option value="$PROJECT_DIR$/roles/icinga2_master/templates/zones.conf" />
+        <option value="$PROJECT_DIR$/roles/icinga2_satellites/templates/zones.conf" />
+        <option value="$PROJECT_DIR$/roles/icinga2_master/templates/api.conf.j2" />
+        <option value="$PROJECT_DIR$/roles/icinga2_satellites/templates/api.conf.j2" />
+        <option value="$PROJECT_DIR$/roles/icinga2_master/vars/main.yml" />
+        <option value="$PROJECT_DIR$/group_vars/icingamaster.yml" />
         <option value="$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1682" />
-    <option name="height" value="1050" />
+    <option name="y" value="25" />
+    <option name="width" value="1366" />
+    <option name="height" value="743" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -224,31 +224,108 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="InfluxDB" />
+              <option name="myItemId" value="influxdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="InfluxDB" />
+              <option name="myItemId" value="influxdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="InfluxDB" />
+              <option name="myItemId" value="influxdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="InfluxDB" />
+              <option name="myItemId" value="influxdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="InfluxDB" />
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icinga2_master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icinga2_master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="roles" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="icinga2_master" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tasks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="influxdb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -258,7 +335,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -426,10 +502,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1682" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="25" width="1366" height="743" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20595238" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20527859" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -464,73 +540,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/roles/icinga2/handlers/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/handlers/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_master/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/icinga2/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/incinga2_sat.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/infludb.yml" />
-    <entry file="file://$PROJECT_DIR$/hosts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/icinga2/templates/ido-pgsql.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/icinga2bdd/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1305">
@@ -631,13 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/icinga2/templates/ido-pgsql.j2">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/icingaweb2/handlers/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -652,20 +654,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/handlers/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="25" selection-start-line="4" selection-start-column="32" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/handlers/main.yml" />
+    <entry file="file://$PROJECT_DIR$/roles/inciga2_satellites/tasks/main.yml" />
     <entry file="file://$PROJECT_DIR$/roles/postgresql/meta/main.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -689,20 +679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/group_vars/incingasat.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="8" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/group_vars/icingamaster.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/roles/icingaweb2/templates/resources.ini.j2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -721,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -729,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -737,23 +711,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/roles/inciga2_master/tasks/main.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/inciga2_master/tasks/main.yml" />
     <entry file="file://$PROJECT_DIR$/roles/icingaweb2/templates/config.ini.j2">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -761,7 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -769,46 +733,142 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/incinga2_sat.yml" />
+    <entry file="file://$PROJECT_DIR$/icinga2.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="5" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2/templates/ido-pgsql.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/templates/constants.conf.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_master/templates/zones.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/templates/zones.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="50" column="1" selection-start-line="50" selection-start-column="1" selection-end-line="50" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_master/templates/api.conf.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/templates/api.conf.j2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/icinga2/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="291">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="32" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/icinga2.yml">
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_master/templates/constants.conf.j2">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icingaweb2/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_satellites/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/group_vars/incingasat.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-279">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/roles/icinga2_master/vars/main.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="5" selection-start-line="2" selection-start-column="5" selection-end-line="2" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/icingaweb2/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="838">
-          <caret line="136" column="49" selection-start-line="136" selection-start-column="49" selection-end-line="136" selection-end-column="49" />
+        <state relative-caret-position="165">
+          <caret line="95" column="27" selection-start-line="95" selection-start-column="27" selection-end-line="95" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/incinga2_sat.yml">
+    <entry file="file://$PROJECT_DIR$/group_vars/icingamaster.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        <state relative-caret-position="30">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/roles/icinga2_master/tasks/main.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state relative-caret-position="531">
+          <caret line="56" column="13" selection-start-line="56" selection-start-column="13" selection-end-line="56" selection-end-column="13" />
           <folding />
         </state>
       </provider>

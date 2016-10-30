@@ -1,0 +1,51 @@
+#############
+#Zone master
+#############
+object Endpoint "icingamaster" {
+        host = "192.168.4.200"
+        port = "5665"
+}
+
+object Zone "master" {
+        endpoints = [ "icingamaster" ]
+}
+
+################
+#Zone satellite1
+################
+
+object Endpoint "icingasat1" {
+		host = "192.168.4.201"
+		port = "5665"
+}
+
+object Endpoint "icingacli1" {
+		host = "192.168.2.1"
+}
+
+object Zone "satellite1" {
+        endpoints = [ "icingasat1", "icingacli1" ]
+        parent = "master"
+}
+
+################
+#Zone satellite2
+################
+
+object Endpoint "icingasat2" {
+		host = "192.168.4.202"
+		port = "5665"
+}
+
+object Endpoint "icingacli2" {
+		host = "192.168.3.1"
+}
+
+object Zone "satellite2" {
+        endpoints = [ "icingasat2", "icingacli2" ]
+        parent = "master"
+}
+
+object Zone "global-templates" {
+  global = true
+}

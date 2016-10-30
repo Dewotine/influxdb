@@ -1,0 +1,16 @@
+/**
+ * Ne pas modifier
+ * Fichier gere par Ansible
+ * Deploye le {{ ansible_date_time.date }}
+ */
+
+/**
+ * The API listener is used for distributed monitoring setups.
+ */
+object ApiListener "api" {
+  cert_path = SysconfDir + "/icinga2/pki/" + NodeName + ".crt"
+  key_path = SysconfDir + "/icinga2/pki/" + NodeName + ".key"
+  ca_path = SysconfDir + "/icinga2/pki/ca.crt"
+
+  ticket_salt = TicketSalt
+}

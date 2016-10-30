@@ -1,6 +1,35 @@
 ---
 # tasks file for inciga2_master
 
+- name: Génération d'une nouvelle autorité de certification
+  shell: icinga2 pki new-ca
+  args:
+    creates: /var/lib/icinga2/ca/ca.key
+
+- name: Génération d'une requête de certificat pour le serveur maître
+  shell: >
+    icinga2 pki new-cert --cn "{{ ansible_nodename }}"
+    --key "{{ dossier_csr }}/{{ ansible_nodename }}".key
+    --csr "{{ dossier_csr }}/{{ ansible_nodename }}".csr
+  args:
+    creates: "{{ dossier_csr }}/{{ ansible_nodename }}.csr"
+
+- name: Signature de la requête précédente
+  shell: >
+    icinga2 pki sign-csr
+    --csr {{ dossier_csr }}/{{ ansible_nodename }}.csr
+    --cert {{ dossier_csr }}/{{ ansible_nodename }}.crt
+  args:
+    creates: "{{ dossier_csr }}/{{ ansible_nodename }}.crt"
+
+- name: Création du certificat pour l'autorité de certication
+  shell: >
+    icinga2 pki sign-csr
+    --csr {{ dossier_csr }}/{{ ansible_nodename }}.csr
+    --cert {{ dossier_csr }}/ca.crt
+  args:
+    creates: "{{ dossier_csr }}/ca.crt"
+
 - name: Activation de la feature api
   shell: icinga2 feature enable api
 
@@ -9,7 +38,20 @@
     name=icinga2
     state=restarted
 
-- name: Génération d'une nouvelle autorité de certification
-  shell: icinga2 pki new-ca
-  args:
-    creates: /var/lib/icinga2/ca/ca.key
+- name: Copie du fichier de configuration "api.conf"
+  template:
+    src=templates/api.conf.j2
+    dest={{ icinga2_dossier_conf }}/features-available/api.conf
+    backup=no
+
+- name: Copie du fichier de configuration "constants.conf"
+  template:
+    src=templates/constants.conf.j2
+    dest={{ icinga2_dossier_conf }}/constants.conf
+    backup=no
+
+- name: Copie du fichier de configuration "zones.conf"
+  template:
+    src=templates/zones.conf.j2
+    dest={{ icinga2_dossier_conf }}/zones.conf
+    backup=no

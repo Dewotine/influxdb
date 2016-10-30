@@ -3,8 +3,9 @@
     icinga_fichier_pref: /etc/apt/preferences.d/icinga2.pref
 
     # Variables pour la configuration du connecteur ido
+    icinga2_dossier_conf: /etc/icinga2
     icinga2_ido_nom_resource: icinga_ido
-    icinga2_ido_conf: /etc/icinga2/features-available/ido-pgsql.conf
+    icinga2_ido_conf: {{ icinga2_dossier_conf }}/features-available/ido-pgsql.conf
     icinga2_bdd_util: icinga2
     icinga2_nom_bdd: icinga2
     icinga2_serveur_bdd: localhost

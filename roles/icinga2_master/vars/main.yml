@@ -1,2 +1,3 @@
 ---
-# vars file for inciga2_master
+# vars file for icinga2_master
+dossier_csr: /etc/icinga2/pki
